@@ -3,9 +3,10 @@ kind: Service
 metadata:
   name: my-app
 spec:
-  type: ClusterIP
+  type: NodePort
   ports:
-    - port: 8080  # Change if your app runs on a different port
+    - port: 8080
+      targetPort: 8080
   selector:
     app: my-app
 
